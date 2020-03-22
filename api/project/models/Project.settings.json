@@ -1,0 +1,45 @@
+{
+  "connection": "default",
+  "collectionName": "projects",
+  "info": {
+    "name": "project",
+    "description": "describe project detial"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "region": {
+      "enum": [
+        "China",
+        "Regional"
+      ],
+      "type": "enumeration"
+    },
+    "type": {
+      "enum": [
+        "web",
+        "mobile"
+      ],
+      "type": "enumeration"
+    },
+    "developers": {
+      "collection": "developer",
+      "via": "currentProjects"
+    }
+  }
+}

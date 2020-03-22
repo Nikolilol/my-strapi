@@ -1,0 +1,38 @@
+{
+  "connection": "default",
+  "collectionName": "developers",
+  "info": {
+    "name": "developer",
+    "description": "Describe developer information with name, experience, skill stack, project info etc... "
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "integer"
+    },
+    "skillsmatrices": {
+      "collection": "skillsmatrix",
+      "via": "developer"
+    },
+    "archivedProjects": {
+      "collection": "project",
+      "via": "developers",
+      "dominant": true
+    },
+    "currentProjects": {
+      "collection": "project",
+      "via": "developers",
+      "dominant": true
+    }
+  }
+}

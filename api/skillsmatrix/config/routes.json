@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/skillsmatrices",
+      "handler": "Skillsmatrix.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/skillsmatrices/count",
+      "handler": "Skillsmatrix.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/skillsmatrices/:id",
+      "handler": "Skillsmatrix.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/skillsmatrices",
+      "handler": "Skillsmatrix.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/skillsmatrices/:id",
+      "handler": "Skillsmatrix.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/skillsmatrices/:id",
+      "handler": "Skillsmatrix.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
